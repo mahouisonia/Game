@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎵 Jeu des chaises musicales</title>
+  <link rel="icon" href="./favicon.ico" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #141414;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    #renderCanvas {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    #menu {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      z-index: 10;
+    }
+
+    #menu h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    #menu p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    #menu button {
+      font-size: 18px;
+      padding: 10px 25px;
+      margin: 10px;
+      background: #e91e63;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #menu button:hover {
+      background: #c2185b;
+    }
+
+    #quitBtn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      z-index: 11;
+      padding: 8px 15px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid white;
+      border-radius: 4px;
+      font-size: 14px;
+      display: none;
+      cursor: pointer;
+    }
+
+    #fps {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: black;
+      border: 2px solid red;
+      color: white;
+      width: 60px;
+      text-align: center;
+      font-size: 12px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU DE DÉPART -->
+  <div id="menu">
+    <h1>🎵 Jeu des zones musicales</h1>
+    <p>Prêt à rejouer à ton enfance ?</p>
+    <button id="playBtn">Jouer</button>
+  </div>
+
+  <!-- QUITTER DURANT LE JEU -->
+  <button id="quitBtn">⏹ Quitter</button>
+  
+
+  <!-- CANVAS DU JEU -->
+  <canvas id="renderCanvas" touch-action="none"></canvas>
+  <div id="fps">0</div>
+
+  <!-- SCRIPT JS -->
+  <script type="module" src="./index.js"></script>
+</body>
+</html>

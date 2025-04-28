@@ -1,0 +1,49 @@
+{
+  "name": "Jeu",
+  "version": "1.0.0",
+  "description": "TODO : The game...",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://mahouisonia.github.io/Jeu/",
+  "devDependencies": {
+    "@babylonjs/core": "^6.40.0",
+    "@babylonjs/gui": "^6.40.0",
+    "@babylonjs/inspector": "^6.40.0",
+    "@babylonjs/loaders": "^6.40.0",
+    "@babylonjs/materials": "^6.40.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^8.56.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "js-loader": "^0.1.1",
+    "source-map-loader": "^5.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.2",
+    "webpack-merge": "^5.10.0"
+  },
+  "dependencies": {
+    "eslint-plugin-import": "^2.29.1",
+    "gh-pages": "^6.1.1"
+  },
+  "sideEffects": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahouisonia/Jeu.git"
+  },
+  "scripts": {
+    "start": "npx webpack serve --config webpack.dev.js",
+    "start:test": "npx webpack serve --config webpack.tests.js",
+    "start:prod": "webpack serve --config webpack.prod.js",
+    "build:dev": "npx webpack --config webpack.dev.js",
+    "build": "npx webpack --config webpack.prod.js",
+    "lint": "npx eslint . --ext .js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "bugs": {
+    "url": "https://github.com/mahouisonia/Jeu/issues"
+  }
+}
