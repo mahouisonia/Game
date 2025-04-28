@@ -1,3 +1,3 @@
-# testBJS6
+# Mon projet Babylon.js
 
-For my students, adding camera and fun things
+Ceci est mon jeu Babylon.js déployé avec GitHub Pages.
